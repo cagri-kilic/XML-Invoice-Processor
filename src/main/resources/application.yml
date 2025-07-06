@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: XML Invoice Processor
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/xml_invoice_processor
+    driver-class-name: org.postgresql.Driver
+    username: your_db_user
+    password: your_db_password
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8080
+
+logging:
+  level:
+    com.cagrikilic.xmlinvoice: INFO
+    org.springframework.web: INFO
