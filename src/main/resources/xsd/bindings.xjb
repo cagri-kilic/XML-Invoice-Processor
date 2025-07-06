@@ -1,0 +1,22 @@
+<jxb:bindings version="3.0"
+              xmlns:jxb="https://jakarta.ee/xml/ns/jaxb"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <jxb:bindings schemaLocation="schemat.xsd"
+                node="/xs:schema">
+    <jxb:schemaBindings>
+      <jxb:package name="com.cagrikilic.xmlinvoice.generated.local"/>
+    </jxb:schemaBindings>
+  </jxb:bindings>
+
+  <jxb:bindings schemaLocation="StrukturyDanych_v10-0E.xsd"
+                node="/xs:schema">
+    <jxb:schemaBindings>
+      <jxb:package name="com.cagrikilic.xmlinvoice.generated.imported"/>
+    </jxb:schemaBindings>
+    <jxb:bindings node="//xs:complexType[@name='TAdres']">
+      <jxb:class name="TAdresImported"/>
+    </jxb:bindings>
+  </jxb:bindings>
+
+</jxb:bindings>
